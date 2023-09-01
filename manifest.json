@@ -1,0 +1,16 @@
+{
+    "manifest_version": 3,
+    "name": "Free YouTube Video Downloader",
+    "version": "1.0",
+    "description": "Download videos from YouTube for free",
+    "permissions": ["activeTab"],
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "icons": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    }
+  }
+  

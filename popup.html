@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Download Video</title>
+    <script src="popup.js" defer></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            text-align: center;
+        }
+
+        #container {
+            /* margin-top: 50px; */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            border-radius: 20px;
+            width: 300px;
+
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 15px;
+            margin: 15px 0;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #007BFF;
+            color: white;
+            padding: 14px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #info {
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #333;
+        }
+
+        #payment-link {
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        /* HTML: <div class="loader"></div> */
+        .loader {
+            margin-top: 10px;
+            margin-left: 11px;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 8px solid #d1914b;
+            box-sizing: border-box;
+            --c: no-repeat radial-gradient(farthest-side, #d64123 94%, #0000);
+            --b: no-repeat radial-gradient(farthest-side, #000 94%, #0000);
+            background:
+                var(--c) 11px 15px,
+                var(--b) 6px 15px,
+                var(--c) 35px 23px,
+                var(--b) 29px 15px,
+                var(--c) 11px 46px,
+                var(--b) 11px 34px,
+                var(--c) 36px 0px,
+                var(--b) 50px 31px,
+                var(--c) 47px 43px,
+                var(--b) 31px 48px,
+                #f6d353;
+            background-size: 15px 15px, 6px 6px;
+            animation: l4 3s infinite;
+        }
+
+        @keyframes l4 {
+            0% {
+                -webkit-mask: conic-gradient(#0000 0, #000 0)
+            }
+
+            16.67% {
+                -webkit-mask: conic-gradient(#0000 60deg, #000 0)
+            }
+
+            33.33% {
+                -webkit-mask: conic-gradient(#0000 120deg, #000 0)
+            }
+
+            50% {
+                -webkit-mask: conic-gradient(#0000 180deg, #000 0)
+            }
+
+            66.67% {
+                -webkit-mask: conic-gradient(#0000 240deg, #000 0)
+            }
+
+            83.33% {
+                -webkit-mask: conic-gradient(#0000 300deg, #000 0)
+            }
+
+            100% {
+                -webkit-mask: conic-gradient(#0000 360deg, #000 0)
+            }
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        #loader-container {
+            padding: 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .loader-text {
+            color: white;
+            font-size: 1.5em;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <h1>Download YouTube Videos</h1>
+        <input type="text" id="videoUrl" placeholder="Enter YouTube URL here">
+        <button id="downloadBtn">Download Video</button>
+        <div id="loader-container" style="display: none;" class="hidden">
+            <div class="loader"></div>
+            
+            <p class="loader-text">You need to wait a while, but this pizza loader will compensate you for your time.
+            </p>
+        </div>
+        <div id="info">
+  <a href="https://www.buymeacoffee.com/mkons" target="_blank">
+    <img style="width:40%" src="coffee.png" alt="QR Code for Coffee" />
+  </a>
+</div>
+
+        
+
+    </div>
+</body>
+
+</html>
